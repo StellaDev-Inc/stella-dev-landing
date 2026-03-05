@@ -6,7 +6,7 @@ export default createMiddleware({
   locales,
 
   // Used when no locale matches
-  defaultLocale: 'en',
+  defaultLocale: 'ko',
 
   // The locale detection is based on the `Accept-Language` header
   // and can be overridden by setting the `NEXT_LOCALE` cookie

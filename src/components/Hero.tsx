@@ -22,7 +22,7 @@ export default function Hero() {
         <p className="text-2xl md:text-4xl mb-8 text-gray-300 font-light tracking-wide drop-shadow-lg">
           {t('subtitle')}
         </p>
-        <p className="text-xl md:text-2xl mb-12 text-gray-400 max-w-2xl mx-auto font-light leading-relaxed whitespace-pre-line">
+        <p className="text-xl md:text-2xl mb-12 text-gray-400 max-w-4xl mx-auto font-light leading-relaxed whitespace-pre-line break-keep">
           {t('description')}
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
