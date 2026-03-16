@@ -64,6 +64,18 @@ export default function Services() {
 
   const services = [
     {
+      title: t('upserve.title'),
+      description: t('upserve.description'),
+      url: "https://upserve.xyz/",
+      logo: "/assets/upserve-logo.svg",
+      features: [
+        t('upserve.features.0'),
+        t('upserve.features.1'),
+        t('upserve.features.2'),
+        t('upserve.features.3')
+      ]
+    },
+    {
       title: t('slur.title'),
       description: t('slur.description'),
       url: "https://slur.stella-dev.org/",

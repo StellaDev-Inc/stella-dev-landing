@@ -17,6 +17,16 @@
     "title": "우리의 서비스",
     "description": "당신의 라이프스타일과 커리어를 한 단계 높여줄 다채로운 애플리케이션 생태계를 경험해보세요.",
     "visitWebsite": "웹사이트 방문",
+    "upserve": {
+      "title": "Upserve",
+      "description": "복잡한 업무를 스스로 처리하는 자율형 AI 에이전트를 코딩 없이 구축할 수 있는 플랫폼입니다.",
+      "features": [
+        "노코드 자율형 AI 에이전트 구축",
+        "웹 브라우징·코드 실행 등 다양한 도구 활용",
+        "Claude, GPT 등 멀티 LLM 지원",
+        "자연어 스케줄 자동화 및 장기 메모리 시스템"
+      ]
+    },
     "slur": {
       "title": "슬러",
       "description": "클래식 음악가를 위한 올인원 플랫폼입니다.",
@@ -86,6 +96,7 @@
     "mission": "기술로 문제를 해결하고, 혁신으로 더 나은 세상을 만듭니다.",
     "email": "문의:",
     "services": "서비스",
+    "upserveFooter": "Upserve - 자율형 AI 에이전트 플랫폼",
     "slurFooter": "슬러 - 클래식 음악 플랫폼",
     "abohaengFooter": "아보행 - AI 감정 다이어리",
     "day100Footer": "Day100 - 마이크로 챌린지",

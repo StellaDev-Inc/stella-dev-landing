@@ -17,6 +17,16 @@
     "title": "Our Services",
     "description": "Discover our ecosystem of applications designed to enhance your lifestyle and career.",
     "visitWebsite": "Visit Website",
+    "upserve": {
+      "title": "Upserve",
+      "description": "A platform to build autonomous AI agents that handle complex tasks on their own — no coding required.",
+      "features": [
+        "No-code autonomous AI agent builder",
+        "Web browsing, code execution & versatile tool integration",
+        "Multi-LLM support including Claude & GPT",
+        "Natural language scheduling & long-term memory system"
+      ]
+    },
     "slur": {
       "title": "Slur",
       "description": "The all-in-one platform for classical musicians.",
@@ -86,6 +96,7 @@
     "mission": "Our mission is to solve problems through technology.\nBuilding innovative solutions for a better world.",
     "email": "Inquiry:",
     "services": "Services",
+    "upserveFooter": "Upserve - Autonomous AI Agent Platform",
     "slurFooter": "Slur - Classical Music Platform",
     "abohaengFooter": "Abohaeng - AI Emotional Diary",
     "day100Footer": "Day100 - Micro Challenges",
