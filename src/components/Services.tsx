@@ -67,7 +67,7 @@ export default function Services() {
       title: t('upserve.title'),
       description: t('upserve.description'),
       url: "https://upserve.xyz/",
-      logo: "/assets/upserve-logo.svg",
+      logo: "/assets/upserve-logo.png",
       features: [
         t('upserve.features.0'),
         t('upserve.features.1'),
