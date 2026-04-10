@@ -22,7 +22,7 @@ export default function Footer() {
             <h4 className="text-xl font-semibold mb-6">{t('services')}</h4>
             <div className="space-y-4">
               <a
-                href="https://upserve.xyz/"
+                href="https://upserve.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-gray-400 hover:text-white transition-colors"
