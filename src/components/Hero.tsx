@@ -1,15 +1,22 @@
 import { useTranslations } from 'next-intl';
+import { StellaSymbol } from './Logo';
 
 export default function Hero() {
   const t = useTranslations('Hero');
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Abstract Planet Graphic */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-20 pointer-events-none">
+      {/* 브랜드 마크를 궤도 삼은 배경 그래픽 */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] pointer-events-none">
         <div className="absolute inset-0 rounded-full border border-white/10 animate-[spin_60s_linear_infinite]" />
-        <div className="absolute inset-[100px] rounded-full border border-white/20 animate-[spin_40s_linear_infinite_reverse]" />
-        <div className="absolute inset-[200px] rounded-full border border-white/30 animate-[spin_20s_linear_infinite]" />
+        <div className="absolute inset-[100px] rounded-full border border-[#7B87FF]/20 animate-[spin_40s_linear_infinite_reverse]" />
+        <div className="absolute inset-[200px] rounded-full border border-white/20 animate-[spin_20s_linear_infinite]" />
+
+        {/* 프리즘 심볼 워터마크 — 락업의 심볼과 동일한 지오메트리 */}
+        <StellaSymbol className="absolute inset-[240px] h-auto w-auto opacity-[0.07] animate-[spin_90s_linear_infinite]" />
+
+        {/* 인디고 글로우 */}
+        <div className="absolute inset-[180px] rounded-full bg-[#5563D8]/10 blur-3xl" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black" />
       </div>
 
@@ -28,14 +35,13 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <a
             href="#services"
-            className="group relative px-8 py-4 rounded-full bg-white/10 text-white font-medium overflow-hidden transition-all hover:bg-white/20 hover:scale-105 backdrop-blur-sm border border-white/20"
+            className="group relative px-8 py-4 rounded-full bg-[#5563D8] text-white font-medium overflow-hidden transition-all hover:bg-[#7B87FF] hover:scale-105 shadow-lg shadow-[#5563D8]/30"
           >
             <span className="relative z-10">{t('exploreServices')}</span>
-            <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity" />
           </a>
           <a
             href="#contact"
-            className="px-8 py-4 rounded-full border border-white/20 text-gray-300 hover:border-white/50 hover:text-white transition-all hover:scale-105 glass"
+            className="px-8 py-4 rounded-full border border-white/20 text-gray-300 hover:border-[#7B87FF]/60 hover:text-white transition-all hover:scale-105 glass"
           >
             {t('contactUs')}
           </a>

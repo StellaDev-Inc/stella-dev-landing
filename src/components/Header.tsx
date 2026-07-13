@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import LanguageSelector from './LanguageSelector';
+import { StellaSymbol, StellaWordmark } from './Logo';
 
 export default function Header() {
   const t = useTranslations('Header');
@@ -11,17 +11,13 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-3">
-              <Image
-                src="/assets/stella-dev-logo.png"
-                alt="Stella Dev Logo"
-                width={32}
-                height={32}
-                className="rounded-lg"
-              />
-              <span className="text-xl font-bold tracking-tighter text-white">
-                StellaDev
-              </span>
+            <Link
+              href="/"
+              aria-label="StellaDev"
+              className="group flex items-center gap-2.5"
+            >
+              <StellaSymbol className="h-8 w-8 transition-transform duration-500 group-hover:rotate-90" />
+              <StellaWordmark className="text-xl text-white" />
             </Link>
           </div>
           <nav className="hidden md:flex space-x-8">

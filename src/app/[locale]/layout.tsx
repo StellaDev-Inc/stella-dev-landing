@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Nanum_Gothic_Coding } from "next/font/google";
+import localFont from "next/font/local";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -11,6 +12,16 @@ const nanumGothicCoding = Nanum_Gothic_Coding({
   variable: "--font-nanum-gothic-coding",
   subsets: ["latin"],
   weight: ["400", "700"],
+});
+
+// 브랜드 락업의 워드마크 폰트. OG 이미지도 같은 파일을 쓴다.
+const sora = localFont({
+  variable: "--font-sora",
+  src: [
+    { path: "../fonts/Sora-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../fonts/Sora-Bold.ttf", weight: "700", style: "normal" },
+  ],
+  display: "swap",
 });
 
 const ogContent = {
@@ -39,7 +50,7 @@ export async function generateMetadata({
     openGraph: {
       title: content.title,
       description: content.description,
-      images: ['/assets/stella-dev-logo.png'],
+      // 이미지는 opengraph-image.tsx 가 자동으로 붙인다.
       locale: locale === 'ko' ? 'ko_KR' : 'en_US',
     },
   };
@@ -69,7 +80,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${nanumGothicCoding.variable} antialiased`}>
+      <body className={`${nanumGothicCoding.variable} ${sora.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <Background />
           {children}

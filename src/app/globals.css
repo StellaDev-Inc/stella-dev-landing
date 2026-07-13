@@ -4,14 +4,25 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
+
+  /* StellaDev "Woven Prism" 브랜드 팔레트 */
+  --brand-indigo: #5563D8;
+  --brand-glow: #7B87FF;
+  --brand-ink: #16181D;
+  --brand-paper: #F4F4F0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-indigo-brand: var(--brand-indigo);
+  --color-glow: var(--brand-glow);
+  --color-ink: var(--brand-ink);
+  --color-paper: var(--brand-paper);
   --font-serif: 'Asta Sans', '42dot Sans', sans-serif;
   --font-sans: 'Asta Sans', '42dot Sans', sans-serif;
   --font-mono: var(--font-nanum-gothic-coding);
+  --font-brand: var(--font-sora), 'Asta Sans', sans-serif;
 }
 
 body {
@@ -28,6 +39,10 @@ body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.font-brand {
+  font-family: var(--font-brand);
 }
 
 .text-gradient {

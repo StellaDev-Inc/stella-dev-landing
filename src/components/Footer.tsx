@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import { StellaLockup } from './Logo';
 
 export default function Footer() {
   const t = useTranslations('Footer');
@@ -8,7 +9,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold mb-6 tracking-tight">{t('companyName')}</h3>
+            <h3 className="mb-6">
+              <StellaLockup
+                symbolClassName="h-10 w-10"
+                wordmarkClassName="text-2xl text-white"
+              />
+              <span className="sr-only">{t('companyName')}</span>
+            </h3>
             <p className="text-gray-400 mb-6 leading-relaxed font-light">
               {t('mission')}
             </p>

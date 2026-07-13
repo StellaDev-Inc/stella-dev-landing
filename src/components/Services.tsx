@@ -14,8 +14,8 @@ function ServiceCard({ title, description, url, features, logo }: ServiceCardPro
   const t = useTranslations('Services');
 
   return (
-    <div className="group relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-white/30 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/20 hover:scale-[1.02]">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+    <div className="group relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-[#7B87FF]/40 transition-all duration-300 hover:shadow-2xl hover:shadow-[#5563D8]/20 hover:scale-[1.02]">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#5563D8]/10 to-[#7B87FF]/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
       <div className="relative z-10">
         <div className="flex items-center mb-6">
@@ -35,7 +35,7 @@ function ServiceCard({ title, description, url, features, logo }: ServiceCardPro
         <ul className="space-y-3 mb-8">
           {features.map((feature, index) => (
             <li key={index} className="flex items-start text-sm text-gray-300">
-              <svg className="h-5 w-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-5 w-5 text-[#7B87FF] mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
               <span>{feature}</span>
@@ -47,7 +47,7 @@ function ServiceCard({ title, description, url, features, logo }: ServiceCardPro
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-white font-semibold group-hover:text-blue-400 transition-colors"
+          className="inline-flex items-center text-white font-semibold group-hover:text-[#7B87FF] transition-colors"
         >
           {t('visitWebsite')}
           <svg className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -1,0 +1,51 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 300 176] /Resources << /ProcSet [/PDF /Text] /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1015 >>
+stream
+0.078 0.086 0.106 rg 0 0 300 176 re f
+0.957 0.957 0.949 rg
+58.24 140.67 m 62.67 140.67 l 62.67 122.18 l 64.60 124.12 l 64.60 142.60 l 56.31 142.60 l h f
+62.67 117.76 m 62.67 113.33 l 44.18 113.33 l 46.12 111.40 l 64.60 111.40 l 64.60 119.69 l h f
+39.76 113.33 m 35.33 113.33 l 35.33 131.82 l 33.40 129.88 l 33.40 111.40 l 41.69 111.40 l h f
+35.33 136.24 m 35.33 140.67 l 53.82 140.67 l 51.88 142.60 l 33.40 142.60 l 33.40 134.31 l h f
+0.482 0.529 1 rg
+65.20 130.13 m 68.33 127.00 l 55.26 113.93 l 57.99 113.93 l 71.07 127.00 l 65.20 132.86 l h f
+52.13 110.80 m 49.00 107.67 l 35.93 120.74 l 35.93 118.01 l 49.00 104.93 l 54.86 110.80 l h f
+32.80 123.87 m 29.67 127.00 l 42.74 140.07 l 40.01 140.07 l 26.93 127.00 l 32.80 121.14 l h f
+45.87 143.20 m 49.00 146.33 l 62.07 133.26 l 62.07 135.99 l 49.00 149.07 l 43.14 143.20 l h f
+BT /F2 15 Tf 0.957 0.957 0.949 rg 26 62 Td (YongWook Ha) Tj ET
+BT /F1 10.5 Tf 0.63 0.64 0.68 rg 26 44 Td (Founder) Tj ET
+BT /F1 10 Tf 0.482 0.529 1 rg 26 26 Td (ceo@stella-dev.org) Tj ET
+
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000279 00000 n 
+0000001346 00000 n 
+0000001416 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1491
+%%EOF
