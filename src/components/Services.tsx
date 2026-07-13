@@ -8,9 +8,12 @@ interface ServiceCardProps {
   url: string;
   features: string[];
   logo: string;
+  /** 배경이 투명한 로고는 다크 카드 위에서 묻히므로 흰 판을 깔아준다.
+   *  자체 배경을 가진 로고(UpServe·슬러)에 깔면 흰 테두리만 삐져나온다. */
+  logoBackdrop?: boolean;
 }
 
-function ServiceCard({ title, description, url, features, logo }: ServiceCardProps) {
+function ServiceCard({ title, description, url, features, logo, logoBackdrop }: ServiceCardProps) {
   const t = useTranslations('Services');
 
   return (
@@ -25,7 +28,7 @@ function ServiceCard({ title, description, url, features, logo }: ServiceCardPro
               alt={`${title} logo`}
               width={48}
               height={48}
-              className="rounded-lg object-contain bg-white p-1"
+              className={`rounded-lg object-contain ${logoBackdrop ? 'bg-white p-1' : ''}`}
             />
           </div>
           <h3 className="text-2xl font-bold text-white">{title}</h3>
@@ -92,6 +95,7 @@ export default function Services() {
       description: t('abohaeng.description'),
       url: "https://abohaeng.stella-dev.org/",
       logo: "/assets/abohaeng-logo.png",
+      logoBackdrop: true,
       features: [
         t('abohaeng.features.0'),
         t('abohaeng.features.1'),
@@ -104,6 +108,7 @@ export default function Services() {
       description: t('day100.description'),
       url: "https://day100.stella-dev.org/",
       logo: "/assets/day100-logo.png",
+      logoBackdrop: true,
       features: [
         t('day100.features.0'),
         t('day100.features.1'),
