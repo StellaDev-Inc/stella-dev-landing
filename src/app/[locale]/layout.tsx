@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Nanum_Gothic_Coding } from "next/font/google";
 import localFont from "next/font/local";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
@@ -8,19 +7,12 @@ import { locales } from '@/i18n';
 import Background from '@/components/Background';
 import "../globals.css";
 
-const nanumGothicCoding = Nanum_Gothic_Coding({
-  variable: "--font-nanum-gothic-coding",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
-// 브랜드 락업의 워드마크 폰트. OG 이미지도 같은 파일을 쓴다.
+// 브랜드 락업의 워드마크 폰트. 400~700을 담은 가변 woff2 하나로 끝난다.
+// (OG 이미지는 woff2 를 못 읽어 같은 폴더의 정적 TTF 를 따로 쓴다.)
 const sora = localFont({
   variable: "--font-sora",
-  src: [
-    { path: "../fonts/Sora-Regular.ttf", weight: "400", style: "normal" },
-    { path: "../fonts/Sora-Bold.ttf", weight: "700", style: "normal" },
-  ],
+  src: "../fonts/Sora-Variable.woff2",
+  weight: "400 700",
   display: "swap",
 });
 
@@ -80,7 +72,17 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${nanumGothicCoding.variable} ${sora.variable} antialiased`}>
+      <head>
+        {/* 본문 폰트는 CSS @import 가 아니라 여기서 링크한다. @import 는 앱 CSS 를
+            받은 뒤에야 요청이 나가는 직렬 체인이라 첫 렌더가 그만큼 밀린다. */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;700&family=42dot+Sans:wght@400;700&display=swap"
+        />
+      </head>
+      <body className={`${sora.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <Background />
           {children}
