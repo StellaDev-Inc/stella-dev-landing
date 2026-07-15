@@ -19,11 +19,11 @@ const sora = localFont({
 const ogContent = {
   ko: {
     title: "스텔라 데브",
-    description: "스텔라 데브는 혁신적인 솔루션으로 문제를 해결하는 기술 회사입니다.",
+    description: "Think, Build, Innovate — 우리는 열정과 효율성을 갖춘 전문가 집단입니다. 문제를 능동적으로 발굴하고 해결하여 최적의 소프트웨어 솔루션을 제공합니다.",
   },
   en: {
     title: "Stella Dev",
-    description: "Stella Dev is a technology company that solves problems through innovative solutions.",
+    description: "Think, Build, Innovate — We are a passionate, efficient team of experts who proactively find and solve problems to deliver optimal software solutions.",
   },
 };
 
