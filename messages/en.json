@@ -22,7 +22,7 @@
     "upserve": {
       "title": "UpServe",
       "tagline": "Delegate it to us instead of hiring",
-      "description": "A managed AI employee for businesses of 1 to 5 people.\nProduct catalog upkeep, booking replies, incoming vendor orders, repetitive document checks — the work that used to need a person, handled by AI.",
+      "description": "A managed AI employee — we take it from setup through day-to-day operation.\nProduct catalog upkeep, booking replies, incoming vendor orders, repetitive document checks — the work that used to need a person, handled by AI.",
       "models": "Claude · GPT · Gemini",
       "features": [
         {

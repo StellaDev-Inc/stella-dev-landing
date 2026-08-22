@@ -22,7 +22,7 @@
     "upserve": {
       "title": "UpServe",
       "tagline": "직원을 뽑는 대신, 우리에게 맡기세요",
-      "description": "1~5인 사업장을 위한 매니지드 AI 직원입니다.\n상품 DB 관리, 예약 응대, 거래처 주문 접수, 반복 서류 검수까지 사람이 붙어 있던 업무를 AI가 대신 처리합니다.",
+      "description": "구축부터 운영까지 저희가 맡는 매니지드 AI 직원입니다.\n상품 DB 관리, 예약 응대, 거래처 주문 접수, 반복 서류 검수까지 사람이 붙어 있던 업무를 AI가 대신 처리합니다.",
       "models": "Claude · GPT · Gemini",
       "features": [
         {
