@@ -23,11 +23,11 @@ const ogContent = {
     title: "스텔라데브",
     // 검색 스니펫에 그대로 실릴 문장. 브랜드 원칙(Think, Build, Innovate) →
     // 팀 소개 → 대표 서비스(UpServe) 순으로, 잘려도 앞부분만으로 회사가 설명되게 둔다.
-    description: "스텔라데브는 Think, Build, Innovate를 원칙으로 삼는 소프트웨어 개발사입니다. 문제를 능동적으로 발굴하고 해결하며, 반복 업무를 대신하는 매니지드 AI 직원 UpServe를 만들고 운영합니다.",
+    description: "스텔라데브는 Think, Build, Innovate를 원칙으로 움직입니다. 문제를 능동적으로 발굴하고 해결하며, 온톨로지 기반으로 업무를 자동화하는 에이전트 플랫폼 UpServe를 만들고 운영합니다.",
   },
   en: {
     title: "StellaDev",
-    description: "StellaDev is a software company built on Think, Build, Innovate. We proactively find and solve problems, and we build and run UpServe — a managed AI employee that handles repetitive work.",
+    description: "StellaDev operates on Think, Build, Innovate. We proactively find and solve problems, and we build and run UpServe — an ontology-driven agent platform that automates everyday work.",
   },
 };
 
