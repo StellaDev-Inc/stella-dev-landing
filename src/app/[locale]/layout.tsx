@@ -16,14 +16,18 @@ const sora = localFont({
   display: "swap",
 });
 
+const SITE_URL = 'https://stella-dev.org';
+
 const ogContent = {
   ko: {
-    title: "스텔라 데브",
-    description: "Think, Build, Innovate — 우리는 열정과 효율성을 갖춘 전문가 집단입니다. 문제를 능동적으로 발굴하고 해결하여 최적의 소프트웨어 솔루션을 제공합니다.",
+    title: "스텔라데브",
+    // 검색 스니펫에 그대로 실릴 문장. 브랜드 원칙(Think, Build, Innovate) →
+    // 팀 소개 → 대표 서비스(UpServe) 순으로, 잘려도 앞부분만으로 회사가 설명되게 둔다.
+    description: "스텔라데브는 Think, Build, Innovate를 원칙으로 삼는 소프트웨어 개발사입니다. 문제를 능동적으로 발굴하고 해결하며, 반복 업무를 대신하는 매니지드 AI 직원 UpServe를 만들고 운영합니다.",
   },
   en: {
-    title: "Stella Dev",
-    description: "Think, Build, Innovate — We are a passionate, efficient team of experts who proactively find and solve problems to deliver optimal software solutions.",
+    title: "StellaDev",
+    description: "StellaDev is a software company built on Think, Build, Innovate. We proactively find and solve problems, and we build and run UpServe — a managed AI employee that handles repetitive work.",
   },
 };
 
@@ -36,10 +40,22 @@ export async function generateMetadata({
   const content = ogContent[locale as keyof typeof ogContent] || ogContent.en;
 
   return {
-    metadataBase: new URL('https://stella-dev.org'),
+    metadataBase: new URL(SITE_URL),
     title: content.title,
     description: content.description,
+    // 두 로케일이 같은 회사를 설명하는 중복 페이지로 잡히지 않게 짝을 명시한다.
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        ko: '/ko',
+        en: '/en',
+        'x-default': '/en',
+      },
+    },
     openGraph: {
+      type: 'website',
+      siteName: content.title,
+      url: `${SITE_URL}/${locale}`,
       title: content.title,
       description: content.description,
       // 이미지는 opengraph-image.tsx 가 자동으로 붙인다.
@@ -70,6 +86,54 @@ export default async function LocaleLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
 
+  const content = ogContent[locale as keyof typeof ogContent] || ogContent.en;
+
+  // 구글이 본문 문단 대신 회사 정보를 스니펫/지식패널로 쓰게 하는 근거 데이터.
+  // 대표 서비스(UpServe)까지 Organization 에 매달아 함께 노출되도록 둔다.
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
+    name: content.title,
+    alternateName: locale === 'ko' ? ['StellaDev', '주식회사 스텔라데브'] : ['스텔라데브'],
+    legalName: locale === 'ko' ? '주식회사 스텔라데브' : 'StellaDev Inc.',
+    url: `${SITE_URL}/${locale}`,
+    logo: `${SITE_URL}/assets/brand/StellaDev-Woven-lockup.svg`,
+    description: content.description,
+    slogan: 'Think, Build, Innovate',
+    email: 'support@stella-dev.org',
+    foundingDate: '2025',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: locale === 'ko' ? '부산진구 서전로 8, 8층' : '8F, 8 Seojeon-ro, Busanjin-gu',
+      addressLocality: locale === 'ko' ? '부산광역시' : 'Busan',
+      addressCountry: 'KR',
+    },
+    makesOffer: {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'SoftwareApplication',
+        name: 'UpServe',
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'Web, iOS, Android',
+        url: 'https://upserve.app',
+        description:
+          locale === 'ko'
+            ? '구축부터 운영까지 맡아 드리는 매니지드 AI 직원입니다. 상품 DB 관리, 예약 응대, 주문 접수, 서류 검수 같은 반복 업무를 AI가 대신 처리합니다.'
+            : 'A managed AI employee, set up and operated for you. It handles repetitive work such as product database upkeep, booking replies, order intake, and document review.',
+      },
+    },
+  };
+
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    url: `${SITE_URL}/${locale}`,
+    name: content.title,
+    inLanguage: locale === 'ko' ? 'ko-KR' : 'en-US',
+    publisher: { '@id': `${SITE_URL}/#organization` },
+  };
+
   return (
     <html lang={locale}>
       <head>
@@ -83,6 +147,12 @@ export default async function LocaleLayout({
         />
       </head>
       <body className={`${sora.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([organizationJsonLd, websiteJsonLd]),
+          }}
+        />
         <NextIntlClientProvider messages={messages}>
           <Background />
           {children}
