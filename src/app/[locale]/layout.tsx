@@ -119,8 +119,8 @@ export default async function LocaleLayout({
         url: 'https://upserve.app',
         description:
           locale === 'ko'
-            ? '구축부터 운영까지 맡아 드리는 매니지드 AI 직원입니다. 상품 DB 관리, 예약 응대, 주문 접수, 서류 검수 같은 반복 업무를 AI가 대신 처리합니다.'
-            : 'A managed AI employee, set up and operated for you. It handles repetitive work such as product database upkeep, booking replies, order intake, and document review.',
+            ? '온톨로지 기반 에이전트 플랫폼입니다. 상품 DB 관리, 예약 응대, 주문 접수, 서류 검수 같은 반복 업무를 업무 구조를 이해한 에이전트가 맥락에 맞게 처리합니다.'
+            : 'An ontology-driven agent platform. Repetitive work such as catalog upkeep, booking replies, order intake, and document checks is handled by agents that understand how the business is structured.',
       },
     },
   };

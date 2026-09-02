@@ -15,19 +15,19 @@
   },
   "Services": {
     "title": "Our Services",
-    "description": "We build AI products that take repetitive work off your hands.\nUpServe is where our focus is today.",
+    "description": "We define the structure of your work as an ontology, then let agents work on top of it.\nUpServe is where our focus is today.",
     "visitWebsite": "Visit Website",
     "featured": "Flagship",
     "otherServices": "Other Services",
     "upserve": {
       "title": "UpServe",
-      "tagline": "Delegate it to us instead of hiring",
-      "description": "A managed AI employee — we take it from setup through day-to-day operation.\nFrom a one-person shop to a full team, AI takes over the repetitive work: catalog upkeep, booking replies, order intake, and document checks.",
+      "tagline": "Agents that know your work, doing it for you",
+      "description": "An ontology-driven agent platform.\nRepetitive work — catalog upkeep, booking replies, order intake, document checks — is handled by agents that understand how your business is structured.",
       "models": "Claude · GPT · Gemini",
       "features": [
         {
-          "title": "Managed operations",
-          "description": "We handle consultation, setup, and day-to-day operation. There is nothing for you to learn."
+          "title": "Grounded in an ontology",
+          "description": "We first define the concepts and relationships your work runs on — products, orders, customers. Agents act with that context, so the results hold up."
         },
         {
           "title": "Approval before action",
@@ -46,8 +46,8 @@
           "description": "Operates in an isolated cloud sandbox — manage it from a browser or the app, no hardware required."
         },
         {
-          "title": "Self-serve option",
-          "description": "Prefer to build it yourself? Start free, no card required."
+          "title": "Build it, or hand it over",
+          "description": "Start free with no card required and build it yourself. Short on time? We take it from setup through day-to-day operation."
         }
       ]
     },
@@ -120,7 +120,7 @@
     "mission": "Our mission is to solve problems through technology.\nBuilding innovative solutions for a better world.",
     "email": "Inquiry:",
     "services": "Services",
-    "upserveFooter": "UpServe - Managed AI Employee",
+    "upserveFooter": "UpServe - Ontology-driven agent platform",
     "slurFooter": "Slur - Classical Music Platform",
     "abohaengFooter": "Abohaeng - AI Emotional Diary",
     "day100Footer": "Day100 - Micro Challenges",
