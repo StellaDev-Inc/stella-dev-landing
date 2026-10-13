@@ -23,7 +23,6 @@
       "title": "UpServe",
       "tagline": "업무를 아는 에이전트가 대신 일합니다",
       "description": "온톨로지 기반 에이전트 플랫폼입니다.\n상품 DB 관리·예약 응대·주문 접수·서류 검수처럼 반복되는 업무를, 업무 구조를 이해한 에이전트가 맥락에 맞게 처리합니다.",
-      "models": "Claude · GPT · Gemini",
       "features": [
         {
           "title": "온톨로지 기반 이해",

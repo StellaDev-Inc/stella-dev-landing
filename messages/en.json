@@ -23,7 +23,6 @@
       "title": "UpServe",
       "tagline": "Agents that know your work, doing it for you",
       "description": "An ontology-driven agent platform.\nRepetitive work — catalog upkeep, booking replies, order intake, document checks — is handled by agents that understand how your business is structured.",
-      "models": "Claude · GPT · Gemini",
       "features": [
         {
           "title": "Grounded in an ontology",

@@ -99,15 +99,9 @@ function FeaturedServiceCard() {
           <p className="text-xl md:text-2xl font-semibold text-white mb-4 leading-snug">
             {t('upserve.tagline')}
           </p>
-          <p className="text-gray-400 mb-6 leading-relaxed whitespace-pre-line">
+          <p className="text-gray-400 mb-8 leading-relaxed whitespace-pre-line">
             {t('upserve.description')}
           </p>
-
-          <div className="mb-8">
-            <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-gray-300">
-              {t('upserve.models')}
-            </span>
-          </div>
 
           <a
             href="https://upserve.app"
@@ -200,14 +194,20 @@ export default function Services() {
           <FeaturedServiceCard />
         </div>
 
-        <h3 className="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-8">
-          {t('otherServices')}
-        </h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <ServiceCard key={index} {...service} />
-          ))}
-        </div>
+        {/* 대표 서비스에 시선이 모이도록 그 외 서비스는 기본으로 접어 둔다. */}
+        <details className="group">
+          <summary className="inline-flex cursor-pointer list-none items-center text-sm font-semibold uppercase tracking-widest text-gray-500 hover:text-gray-300 transition-colors [&::-webkit-details-marker]:hidden">
+            <h3>{t('otherServices')}</h3>
+            <svg className="ml-2 h-4 w-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <ServiceCard key={index} {...service} />
+            ))}
+          </div>
+        </details>
       </div>
     </section>
   );
