@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import LanguageSelector from './LanguageSelector';
 import { StellaSymbol, StellaWordmark } from './Logo';
+import { UPSERVE_SIGNUP_URL } from '@/lib/upserve';
 
 export default function Header() {
   const t = useTranslations('Header');
@@ -39,6 +40,14 @@ export default function Header() {
           </nav>
           <div className="flex items-center space-x-4">
             <LanguageSelector />
+            <a
+              href={UPSERVE_SIGNUP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex rounded-full bg-[#5563D8] px-4 py-1.5 text-sm font-medium text-white hover:bg-[#7B87FF] transition-colors"
+            >
+              {t('startFree')}
+            </a>
             <div className="md:hidden">
               <button
                 type="button"

@@ -1,8 +1,26 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { StellaLockup } from './Logo';
+import {
+  UPSERVE_APP_STORE_URL,
+  UPSERVE_PLAY_STORE_URL,
+  UPSERVE_PRICING_URL,
+  UPSERVE_SIGNUP_URL,
+  UPSERVE_URL,
+  upserveDocsUrl,
+} from '@/lib/upserve';
 
 export default function Footer() {
   const t = useTranslations('Footer');
+  const locale = useLocale();
+
+  const links = [
+    { href: UPSERVE_URL, label: t('upserveFooter') },
+    { href: UPSERVE_SIGNUP_URL, label: t('upserveStart') },
+    { href: UPSERVE_PRICING_URL, label: t('upservePricing') },
+    { href: upserveDocsUrl(locale), label: t('upserveDocs') },
+    { href: UPSERVE_APP_STORE_URL, label: 'App Store' },
+    { href: UPSERVE_PLAY_STORE_URL, label: 'Google Play' },
+  ];
 
   return (
     <footer id="footer" className="bg-black text-white border-t border-gray-900">
@@ -28,38 +46,17 @@ export default function Footer() {
           <div>
             <h4 className="text-xl font-semibold mb-6">{t('services')}</h4>
             <div className="space-y-4">
-              <a
-                href="https://upserve.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-gray-400 hover:text-white transition-colors"
-              >
-                {t('upserveFooter')}
-              </a>
-              <a
-                href="https://slur.stella-dev.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-gray-400 hover:text-white transition-colors"
-              >
-                {t('slurFooter')}
-              </a>
-              <a
-                href="https://abohaeng.stella-dev.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-gray-400 hover:text-white transition-colors"
-              >
-                {t('abohaengFooter')}
-              </a>
-              <a
-                href="https://day100.stella-dev.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-gray-400 hover:text-white transition-colors"
-              >
-                {t('day100Footer')}
-              </a>
+              {links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-gray-400 hover:text-white transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
         </div>

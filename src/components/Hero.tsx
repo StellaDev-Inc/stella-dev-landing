@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { StellaSymbol } from './Logo';
+import { UPSERVE_SIGNUP_URL } from '@/lib/upserve';
 
 export default function Hero() {
   const t = useTranslations('Hero');
@@ -34,16 +35,18 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <a
-            href="#services"
+            href={UPSERVE_SIGNUP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative px-8 py-4 rounded-full bg-[#5563D8] text-white font-medium overflow-hidden transition-all hover:bg-[#7B87FF] hover:scale-105 shadow-lg shadow-[#5563D8]/30"
           >
-            <span className="relative z-10">{t('exploreServices')}</span>
+            <span className="relative z-10">{t('startFree')}</span>
           </a>
           <a
-            href="#contact"
+            href="#services"
             className="px-8 py-4 rounded-full border border-white/20 text-gray-300 hover:border-[#7B87FF]/60 hover:text-white transition-all hover:scale-105 glass"
           >
-            {t('contactUs')}
+            {t('explorePlatform')}
           </a>
         </div>
       </div>

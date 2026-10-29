@@ -21,13 +21,13 @@ const SITE_URL = 'https://stella-dev.org';
 const ogContent = {
   ko: {
     title: "스텔라데브",
-    // 검색 스니펫에 그대로 실릴 문장. 브랜드 원칙(Think, Build, Innovate) →
-    // 팀 소개 → 대표 서비스(UpServe) 순으로, 잘려도 앞부분만으로 회사가 설명되게 둔다.
-    description: "스텔라데브는 Think, Build, Innovate를 원칙으로 움직입니다. 문제를 능동적으로 발굴하고 해결하며, 온톨로지 기반으로 업무를 자동화하는 에이전트 플랫폼 UpServe를 만들고 운영합니다.",
+    // 검색 스니펫에 그대로 실릴 문장. 회사 정체성(AI 에이전트 플랫폼 운영사) →
+    // 플랫폼(UpServe) 순으로, 잘려도 앞부분만으로 회사가 설명되게 둔다.
+    description: "스텔라데브는 AI 에이전트 플랫폼 운영사입니다. 온톨로지로 업무 구조를 정의하고 그 위에서 에이전트가 반복 업무를 처리하는 플랫폼 UpServe를 만들고 운영합니다.",
   },
   en: {
     title: "StellaDev",
-    description: "StellaDev operates on Think, Build, Innovate. We proactively find and solve problems, and we build and run UpServe — an ontology-driven agent platform that automates everyday work.",
+    description: "StellaDev is an AI agent platform company. We build and operate UpServe, where agents grounded in an ontology of your business handle everyday repetitive work.",
   },
 };
 
@@ -89,7 +89,7 @@ export default async function LocaleLayout({
   const content = ogContent[locale as keyof typeof ogContent] || ogContent.en;
 
   // 구글이 본문 문단 대신 회사 정보를 스니펫/지식패널로 쓰게 하는 근거 데이터.
-  // 대표 서비스(UpServe)까지 Organization 에 매달아 함께 노출되도록 둔다.
+  // 운영 중인 플랫폼(UpServe)까지 Organization 에 매달아 함께 노출되도록 둔다.
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -117,10 +117,11 @@ export default async function LocaleLayout({
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web, iOS, Android',
         url: 'https://upserve.app',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         description:
           locale === 'ko'
-            ? '온톨로지 기반 에이전트 플랫폼입니다. 상품 DB 관리, 예약 응대, 주문 접수, 서류 검수 같은 반복 업무를 업무 구조를 이해한 에이전트가 맥락에 맞게 처리합니다.'
-            : 'An ontology-driven agent platform. Repetitive work such as catalog upkeep, booking replies, order intake, and document checks is handled by agents that understand how the business is structured.',
+            ? '온톨로지 기반 에이전트 플랫폼입니다. 견적 처리, 서류 검수, 메일 업무 처리, ERP 데이터 정리 같은 반복 사무 업무를 업무 구조를 이해한 에이전트가 맥락에 맞게 처리합니다.'
+            : 'An ontology-driven agent platform. Repetitive office work such as quote processing, document review, email handling, and ERP data cleanup is handled by agents that understand how the business is structured.',
       },
     },
   };

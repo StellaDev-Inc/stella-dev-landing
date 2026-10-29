@@ -3,30 +3,29 @@
     "think": "Think",
     "build": "Build",
     "innovate": "Innovate",
-    "services": "Services",
-    "contact": "Contact"
+    "services": "Platform",
+    "contact": "Contact",
+    "startFree": "Start Free"
   },
   "Hero": {
     "title": "Think, Build, Innovate",
-    "subtitle": "Technology Solving Problems",
-    "description": "StellaDev is a passionate and efficient team of experts. We improve client software or proactively find and solve problems to build optimal solutions.",
-    "exploreServices": "Explore Services",
-    "contactUs": "Contact Us"
+    "subtitle": "AI Agent Platform Company",
+    "description": "StellaDev builds and operates UpServe, an AI agent platform.\nAgents that understand how your business works take on repetitive office work, so your people can focus on what matters.",
+    "startFree": "Start Free",
+    "explorePlatform": "Explore UpServe"
   },
   "Services": {
-    "title": "Our Services",
-    "description": "We define the structure of your work as an ontology, then let agents work on top of it.\nUpServe is where our focus is today.",
-    "visitWebsite": "Visit Website",
-    "featured": "Flagship",
-    "otherServices": "Other Services",
+    "title": "Our Platform",
+    "description": "A platform where agents work on top of an ontology of your business.\nThis is UpServe, built and operated by StellaDev.",
+    "featured": "AI Agent Platform",
     "upserve": {
       "title": "UpServe",
       "tagline": "Agents that know your work, doing it for you",
-      "description": "An ontology-driven agent platform.\nRepetitive work — catalog upkeep, booking replies, order intake, document checks — is handled by agents that understand how your business is structured.",
+      "description": "An ontology-driven agent platform.\nRepetitive office work — quote processing, document review, email handling, ERP data cleanup — is handled by agents that understand how your business is structured.",
       "features": [
         {
           "title": "Grounded in an ontology",
-          "description": "We first define the concepts and relationships your work runs on — products, orders, customers. Agents act with that context, so the results hold up."
+          "description": "UpServe first defines the concepts and relationships your work runs on — quotes, accounts, documents. Agents act with that context, so the results hold up."
         },
         {
           "title": "Approval before action",
@@ -38,112 +37,87 @@
         },
         {
           "title": "Works with your tools",
-          "description": "Connects to 18+ services including SmartStore, Naver Booking, Ecount ERP, Slack, and GitHub."
+          "description": "Connects to 18+ tools including Ecount ERP, Slack, and GitHub."
         },
         {
           "title": "Runs in the cloud",
           "description": "Operates in an isolated cloud sandbox — manage it from a browser or the app, no hardware required."
         },
         {
-          "title": "Build it, or hand it over",
-          "description": "Start free with no card required and build it yourself. Short on time? We take it from setup through day-to-day operation."
+          "title": "Start free",
+          "description": "Start right away with no card required, then scale with the plan that fits."
         }
       ]
     },
-    "slur": {
-      "title": "Slur",
-      "description": "The all-in-one platform for classical musicians.",
-      "features": [
-        "Real-time audition aggregation",
-        "Smart musician matching",
-        "One-touch application system",
-        "Automated career portfolio"
-      ]
-    },
-    "abohaeng": {
-      "title": "Abohaeng",
-      "description": "AI-powered emotional diary for your daily life.",
-      "features": [
-        "Multi-modal diary (Text, Photo, Voice)",
-        "Empathetic AI feedback",
-        "Self-reflection analytics",
-        "Discovering ordinary happiness"
-      ]
-    },
-    "day100": {
-      "title": "Day100",
-      "description": "Energize your daily life through micro-challenges and small achievements.",
-      "features": [
-        "AI-personalized micro-challenges",
-        "Achievement celebration system",
-        "Daily vitality boosters",
-        "Small wins tracking"
-      ]
-    }
+    "startFree": "Start Free",
+    "pricing": "Pricing",
+    "docs": "Docs",
+    "availableOn": "Available on Web, iOS, and Android"
   },
   "Think": {
     "title": "Think",
-    "subtitle": "Creative Thinking and Strategic Analysis",
-    "description": "The first step in solving complex problems is deep thinking. We precisely understand client requirements and design optimal solutions through innovative approaches.",
+    "subtitle": "Understands Your Work",
+    "description": "UpServe models your work as an ontology.\nThe concepts and relationships your work runs on — quotes, accounts, documents — become structure, so agents decide with context.",
     "features": [
-      "Problem analysis and requirement definition",
-      "Creative solution design",
-      "Strategic approach development",
-      "Risk analysis and contingency planning"
+      "Ontology-based work model",
+      "Context from concepts and relationships",
+      "Plain-language instructions",
+      "Structured business data"
     ]
   },
   "Build": {
     "title": "Build",
-    "subtitle": "Efficient Development and Implementation",
-    "description": "This is the implementation phase where we bring designed solutions to reality. We develop high-quality software that ensures performance and stability using the latest technology stack.",
+    "subtitle": "Works Inside Your Tools",
+    "description": "Agents in UpServe work directly in the tools you already use.\nThey connect to 18+ tools including Ecount ERP, Slack, and GitHub, and run in an isolated cloud sandbox.",
     "features": [
-      "Modern technology stack utilization",
-      "Quality and performance optimization",
-      "Scalable architecture",
-      "Thorough testing and validation"
+      "18+ tool integrations",
+      "Isolated cloud sandbox",
+      "Approval before action",
+      "Schedules from plain language"
     ]
   },
   "Innovate": {
     "title": "Innovate",
-    "subtitle": "Continuous Improvement and Innovation",
-    "description": "Beyond completed solutions, we pursue continuous innovation. We adapt to changing environments and introduce new technologies to create better value.",
+    "subtitle": "Runs on Its Own",
+    "description": "Once you hand work to UpServe, it keeps running.\nAgents execute on schedule, report results by push notification, and can be managed from the web or the iOS and Android apps.",
     "features": [
-      "Continuous improvement and updates",
-      "Future-oriented technology adoption",
-      "User experience optimization",
-      "Business value maximization"
+      "Autonomous scheduled runs",
+      "Results via push notification",
+      "Web, iOS, and Android apps",
+      "Free to start, no card required"
     ]
   },
   "Footer": {
     "companyName": "StellaDev",
-    "mission": "Our mission is to solve problems through technology.\nBuilding innovative solutions for a better world.",
+    "mission": "AI agents that understand your work,\nso people can focus on what matters.",
     "email": "Inquiry:",
-    "services": "Services",
+    "services": "Platform",
     "upserveFooter": "UpServe - Ontology-driven agent platform",
-    "slurFooter": "Slur - Classical Music Platform",
-    "abohaengFooter": "Abohaeng - AI Emotional Diary",
-    "day100Footer": "Day100 - Micro Challenges",
     "copyright": "All rights reserved.",
     "legalName": "StellaDev",
     "ceo": "CEO: Ha Yong Wook",
     "businessRegistration": "Business Registration: 380-88-03648",
-    "address": "Address: 8th Floor, 8 Seojeon-ro, Busanjin-gu, Busan, South Korea"
+    "address": "Address: 8th Floor, 8 Seojeon-ro, Busanjin-gu, Busan, South Korea",
+    "upserveStart": "Start Free",
+    "upservePricing": "Pricing",
+    "upserveDocs": "Docs"
   },
   "Contact": {
     "title": "Contact Us",
-    "description": "Whether you want to discuss a project or have any questions, feel free to reach out anytime. Let's create the best solution together.",
+    "description": "Questions about using UpServe, pricing, or partnerships? Reach out anytime.",
     "info": {
       "title": "Contact Information",
       "email": "Email",
       "responseTime": "Response Time",
       "responseTimeValue": "Within 24 hours",
-      "consultation": "Consultation",
-      "consultationValue": "Free initial consultation"
+      "docs": "Docs",
+      "docsValue": "User guides and integration setup"
     },
-    "emailCard": {
-      "title": "Send us an Email",
-      "description": "We'd love to hear from you. Click the button below to send us a message directly.",
-      "button": "Contact Support"
+    "startCard": {
+      "title": "Get started today",
+      "description": "Start using UpServe for free — no card required.",
+      "button": "Start Free",
+      "emailLink": "Email us instead"
     }
   },
   "LanguageSelector": {
